@@ -187,8 +187,21 @@
       use-package-expand-minimally t)
 #+END_SRC
 
++ 操作系统判断
+#+BEGIN_SRC emacs
+(defconst *is-mac* (eq system-type 'darwin))
+(defconst *is-linux* (eq system-type 'gnu/linux))
+(defconst *is-windows* (or (eq system-type 'ms-dos) (eq system-type 'windows-nt)))
+#+END_SRC
+
++ 用 y/n 代替 yes/no
+#+BEGIN_SRC emacs
+(defalias 'yes-or-no-p 'y-or-n-p)
+#+END_SRC
+
 *** Emacs 阅读推荐
 
 + [[https://www.cnblogs.com/youge/p/4518739.html][Emacs 快速指南]]
 + [[https://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html#sec-4-1][Org-mode 简明手册]]
++ [[https://juejin.cn/post/7085254713595133960#heading-21][Emacs 高手修炼手册]]
 
