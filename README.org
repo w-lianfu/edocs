@@ -9,22 +9,22 @@
 
 *** 主模式(major mode)
 
-| 模式                                 | 功能                 |
-|--------------------------------------+----------------------|
-| 基本模式(fundamental mode)           | 默认模式，无特殊行为 |
-| 文本模式(text mode)                  | 书写文字             |
-| 邮件模式(mail mode)                  | 书写电子邮件         |
-| 阅读电子邮件模式(RMAIL mode)         | 阅读和组织电子邮件   |
-| 只读模式(view mode)                  | 查看文件，不能编辑   |
-| shell 模式(shell mode)               | 运行 shell 命令      |
-| FTP 模式(ange-ftp mode)              | 查看远程系统上的文件 |
-| Telnet 模式(telnet mode)             | 登录到远程系统       |
-| 大纲模式(outline mode)               | 书写大纲             |
-| 缩进文本模式(indented text mode)     | 自动缩进模式         |
-| 图形模式(picture mode)               | 绘制图形             |
-| Emacs LISP 模式(Emacs LISP mode)     | ---                  |
-| LISP 模式(LISP mode)                 | ---                  |
-| LISP 互动模式(LISP interaction mode) | ---                  |
+| 模式                                 | 功能                     |
+|--------------------------------------+--------------------------|
+| 基本模式(fundamental mode)           | 默认模式，无特殊行为     |
+| 文本模式(text mode)                  | 书写文字                 |
+| 邮件模式(mail mode)                  | 书写电子邮件             |
+| 阅读电子邮件模式(RMAIL mode)         | 阅读和组织电子邮件       |
+| 只读模式(view mode)                  | 查看文件，不能编辑       |
+| shell 模式(shell mode)               | 运行 shell 命令          |
+| FTP 模式(ange-ftp mode)              | 查看远程系统上的文件     |
+| Telnet 模式(telnet mode)             | 登录到远程系统           |
+| 大纲模式(outline mode)               | 书写大纲                 |
+| 缩进文本模式(indented text mode)     | 自动缩进模式             |
+| 图形模式(picture mode)               | 绘制图形                 |
+| Emacs LISP 模式(Emacs LISP mode)     | 编辑emacs lisp代码       |
+| LISP 模式(LISP mode)                 | 编辑lisp代码             |
+| LISP 互动模式(LISP interaction mode) | 编辑和运行emacs lisp代码 |
 
 *** 副模式(minor mode)
 | 模式                         | 功能                        |
@@ -47,11 +47,17 @@
 | C-x C-s  | save-buffer                  | save-buffer    | 保存文件                                    |
 | C-x C-w  | write-file                   | save buffer as | 把缓冲区内容写入一个文件                    |
 | C-x C-c  | save-buffers-kill-emacs      | exit emacs     | 退出 Emacs                                  |
-| C-h      | help-command                 | help           | 进入 Emacs 的在线帮助系统                   |
-| C-h f    | describe-function            | 描述 "命令"    | 描述 "指定命令" 的在线帮助信息              |
-| C-h k    | describe-key                 | 描述 "键"      | 描述 "指定键" 的在线帮助信息                |
-| C-h t    | help-with-tutorial           | emacs tutorial | 启动 Emacs 教程                             |
-| C-h i    | info-goto-emacs-command-node | browse manual  | 启动 Info 文档阅读器                        |
+
+*** 帮助相关命令
+
+| 键盘操作 | 命令名称                     | 功能           |                                |
+|----------+------------------------------+----------------+--------------------------------|
+| C-h      | help-command                 | help           | 进入 Emacs 的在线帮助系统      |
+| C-h C-h  | ---                          | 帮助命令手册   |                                |
+| C-h f    | describe-function            | 描述 "命令"    | 描述 "指定命令" 的在线帮助信息 |
+| C-h k    | describe-key                 | 描述 "键"      | 描述 "指定键" 的在线帮助信息   |
+| C-h t    | help-with-tutorial           | emacs tutorial | 启动 Emacs 教程                |
+| C-h i    | info-goto-emacs-command-node | browse manual  | 启动 Info 文档阅读器           |
 
 *** 光标移动命令
 
@@ -148,4 +154,15 @@
 
 #+ATTR_HTML: :width 100%
 [[./photo/GNU Emacs Reference Card-version22.png]]
+
+** 对 Emacs 进行定制
+
+*** Tips
+
++ 通过emacs -q 启动emacs不会读取.emacs文件配置
+
+*** Emacs 阅读推荐
+
++ [[https://www.cnblogs.com/youge/p/4518739.html][Emacs 快速指南]]
++ [[https://www.cnblogs.com/Open_Source/archive/2011/07/17/2108747.html#sec-4-1][Org-mode 简明手册]]
 
