@@ -36,43 +36,44 @@
 
 ** 与文件操作有关的命令
 
-| 键盘操作 | 命令名称                     | 解释说明       | 实现                                        |          |
-|----------+------------------------------+----------------+---------------------------------------------+----------|
-| C-x C-f  | find-file                    | open file      | 查找文件并在一个新缓冲区打开                |          |
-| C-x C-v  | find-alternate-file          | ---            | 读入另一个文件替换掉用 "C-x C-f" 读入的文件 |          |
-| C-x i    | insert-file                  | insert file    | 把文件插入到光标所在位置                    |          |
-| C-x C-s  | save-buffer                  | save-buffer    | save buffer                                 | 保存文件 |
-| C-x C-w  | write-file                   | save buffer as | 把缓冲区内容写入一个文件                    |          |
-| C-x C-c  | save-buffers-kill-emacs      | exit emacs     | 退出 Emacs                                  |          |
-| C-h      | help-command                 | help           | 进入 Emacs 的在线帮助系统                   |          |
-| C-h f    | describe-function            | 描述 "命令"    | 描述 "指定命令" 的在线帮助信息              |          |
-| C-h k    | describe-key                 | 描述 "键"      | 描述 "指定键" 的在线帮助信息                |          |
-| C-h t    | help-with-tutorial           | emacs tutorial | 启动 Emacs 教程                             |          |
-| C-h i    | info-goto-emacs-command-node | browse manual  | 启动 Info 文档阅读器                        |          |
+| 键盘操作 | 命令名称                     | 解释说明       | 实现                                        |
+|----------+------------------------------+----------------+---------------------------------------------|
+| C-x C-f  | find-file                    | open file      | 查找文件并在一个新缓冲区打开                |
+| C-x C-v  | find-alternate-file          | ---            | 读入另一个文件替换掉用 "C-x C-f" 读入的文件 |
+| C-x i    | insert-file                  | insert file    | 把文件插入到光标所在位置                    |
+| C-x C-s  | save-buffer                  | save-buffer    | 保存文件                                    |
+| C-x C-w  | write-file                   | save buffer as | 把缓冲区内容写入一个文件                    |
+| C-x C-c  | save-buffers-kill-emacs      | exit emacs     | 退出 Emacs                                  |
+| C-h      | help-command                 | help           | 进入 Emacs 的在线帮助系统                   |
+| C-h f    | describe-function            | 描述 "命令"    | 描述 "指定命令" 的在线帮助信息              |
+| C-h k    | describe-key                 | 描述 "键"      | 描述 "指定键" 的在线帮助信息                |
+| C-h t    | help-with-tutorial           | emacs tutorial | 启动 Emacs 教程                             |
+| C-h i    | info-goto-emacs-command-node | browse manual  | 启动 Info 文档阅读器                        |
 
+** 光标移动命令
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+| 键盘操作 | 命令名称            | 动作                                           |
+|----------+---------------------+------------------------------------------------|
+| C-f      | forward-char        | 光标右移一个字符                               |
+| C-b      | backward-char       | 光标左移一个字符                               |
+| C-p      | previous-line       | 光标上移一行                                   |
+| C-n      | next-line           | 光标下移一行                                   |
+| M-f      | forward-word        | 光标右移一个单词                               |
+| M-b      | backward-word       | 光标左移一个单词                               |
+| C-a      | beginning-of-line   | 光标移到行首                                   |
+| C-e      | end-of-line         | 光标移到行尾                                   |
+| M-e      | forward-sentence    | 光标左移一个句子                               |
+| M-a      | backward-sentence   | 光标右移一个句子                               |
+| M-}      | forward-paragraph   | 光标右移一个段落                               |
+| M-{      | backward-paragraph  | 光标左移一个段落                               |
+| C-v      | scroll-up           | 屏幕上卷一屏                                   |
+| M-v      | scroll-down         | 屏幕下卷一屏                                   |
+| C-x }    | forward-page        | 光标右移一页                                   |
+| C-x {    | backward-page       | 光标左移一页                                   |
+| M <      | beginning-of-buffer | 光标左移到文件头                               |
+| M >      | end-of-buffer       | 光标右移到文件尾                               |
+| 无       | goto-line           | 光标前进到文件的第 [n] 行                      |
+| 无       | goto-char           | 光标前进到文件的第 [n] 个字符                  |
+| C-l      | recenter            | 重新绘制画面，并将当前行放到画面中心处         |
+| M [n]    | digit-argument      | 重复执行 [n] 次后续命令                        |
+| C-u [n]  | universal-argument  | 重复执行 [n] 次后续命令(省略 [n] 时 重复 4 次) |
