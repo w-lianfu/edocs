@@ -50,14 +50,14 @@
 
 *** 帮助相关命令
 
-| 键盘操作 | 命令名称                     | 功能           |                                |
-|----------+------------------------------+----------------+--------------------------------|
-| C-h      | help-command                 | help           | 进入 Emacs 的在线帮助系统      |
-| C-h C-h  | ---                          | 帮助命令手册   |                                |
-| C-h f    | describe-function            | 描述 "命令"    | 描述 "指定命令" 的在线帮助信息 |
-| C-h k    | describe-key                 | 描述 "键"      | 描述 "指定键" 的在线帮助信息   |
-| C-h t    | help-with-tutorial           | emacs tutorial | 启动 Emacs 教程                |
-| C-h i    | info-goto-emacs-command-node | browse manual  | 启动 Info 文档阅读器           |
+| 键盘操作         | 命令名称                     | 功能           |                                |
+|------------------+------------------------------+----------------+--------------------------------|
+| C-h              | help-command                 | help           | 进入 Emacs 的在线帮助系统      |
+| C-h C-h 或 C-h ? | help-for-help                | 帮助命令手册   |                                |
+| C-h f            | describe-function            | 描述 "命令"    | 描述 "指定命令" 的在线帮助信息 |
+| C-h k            | describe-key                 | 描述 "键"      | 描述 "指定键" 的在线帮助信息   |
+| C-h t            | help-with-tutorial           | emacs tutorial | 启动 Emacs 教程                |
+| C-h i            | info-goto-emacs-command-node | browse manual  | 启动 Info 文档阅读器           |
 
 *** 光标移动命令
 
@@ -160,6 +160,32 @@
 *** Tips
 
 + 通过emacs -q 启动emacs不会读取.emacs文件配置
+
+*** Emacs 配置
+
+**** use-package
+
++ 常用格式
+#+BEGIN_SRC emacs
+(use-package package-name
+             :ensure t ; 是否一定要确保已安装
+             :defer t ; 是否要延迟加载
+             :init (setq ...) ; 初始化配置
+             :config (...) ; 初始化后的基本配置参数
+             :bind (...) ; 快捷键绑定
+             :hook (...) ; hook的绑定)
+#+END_SRC
+
++ 建议添加的配置
+#+BEGIN_SRC emacs
+;; `use-package-always-ensure` 避免每个软件包都加 ":ensure t"
+;; `use-package-always-defer` 避免每个软件包都加 ":defer t"
+
+(setq use-package-always-ensure t
+      use-package-always-defer t
+      use-package-enable-imenu-support t
+      use-package-expand-minimally t)
+#+END_SRC
 
 *** Emacs 阅读推荐
 
