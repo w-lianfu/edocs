@@ -1,10 +1,12 @@
-#+TITLE Emacs Docs
-#+AUTHOR wlianfu
-#+DATE 2023-03-17
-#+EMAIL h5lianfu@gmail.com
+#+TITLE: Emacs Docs
+#+AUTHOR: wlianfu
+#+DATE: 2023-03-17
+#+EMAIL: h5lianfu@gmail.com
 #+OPTIONS: github address: https://github.com/w-lianfu/edocs
 
-## 编辑模式
+## 编辑模式(Edit mode)
+
+* 主模式(major mode)
 
 | 模式                                 | 功能                 |
 |--------------------------------------+----------------------|
@@ -23,6 +25,14 @@
 | LISP 模式(LISP mode)                 | --                   |
 | LISP 互动模式(LISP interaction mode) | --                   |
 
+* 副模式(minor mode)
+| 模式                         | 功能                        |
+| 自动换行模式(auto-fill mode) | 打开文字自动换行模式        |
+| 改写模式(overwrite mode)     | 输入时替换字符              |
+| 自动保存模式(auto-save-mode) | 文件按照一定时间自动保存    |
+| 行号模式(line number mode)   | 在状态行上显示文本行号      |
+| 缩略词模式(abbrev mode)      | 允许使用单词的简写形式      |
+| VC 模式(VC mode)             | 在 Emacs 下使用版本控制系统 |
 
 
 
