@@ -70,10 +70,37 @@
 | M-v      | scroll-down         | 屏幕下卷一屏                                   |
 | C-x }    | forward-page        | 光标右移一页                                   |
 | C-x {    | backward-page       | 光标左移一页                                   |
-| M <      | beginning-of-buffer | 光标左移到文件头                               |
-| M >      | end-of-buffer       | 光标右移到文件尾                               |
+| M-<      | beginning-of-buffer | 光标左移到文件头                               |
+| M->      | end-of-buffer       | 光标右移到文件尾                               |
 | 无       | goto-line           | 光标前进到文件的第 [n] 行                      |
 | 无       | goto-char           | 光标前进到文件的第 [n] 个字符                  |
 | C-l      | recenter            | 重新绘制画面，并将当前行放到画面中心处         |
 | M [n]    | digit-argument      | 重复执行 [n] 次后续命令                        |
 | C-u [n]  | universal-argument  | 重复执行 [n] 次后续命令(省略 [n] 时 重复 4 次) |
+
+** 文本删除命令
+
+| 键盘操作 | 命令名称                | 动作                   |
+|----------+-------------------------+------------------------|
+| C-d      | delete-char             | 删除光标所在位置的字符 |
+| DEL      | delete-backward-char    | 删除光标左侧的字符     |
+| M-d      | kill-word               | 删除光标右侧的单词     |
+| M-DEL    | backward-kill-word      | 删除光标左侧的单词     |
+| C-k      | kill-line               | 从光标位置删除到行尾   |
+| M-k      | kill-sentence           | 删除光标右侧的句子     |
+| C-x DEL  | backward-kill-sentence  | 删除光标左侧的句子     |
+| C-y      | yank                    | 恢复被删除的文本       |
+| C-w      | kill-region             | 删除文本块             |
+| 无       | kill-paragraph          | 删除光标右侧的段落     |
+| 无       | backward-kill-paragraph | 删除光标左侧的段落     |
+
+
+
+
+
+
+
+
+
+
+
