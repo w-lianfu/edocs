@@ -3,6 +3,7 @@
 #+DATE: 2023-03-17
 #+EMAIL: h5lianfu@gmail.com
 #+OPTIONS: github address: https://github.com/w-lianfu/edocs
+#+OPTIONS: 摘录自 <<学习GNU Emacs (第2版)>>
 
 ** 编辑模式(Edit mode)
 
@@ -94,13 +95,49 @@
 | 无       | kill-paragraph          | 删除光标右侧的段落     |
 | 无       | backward-kill-paragraph | 删除光标左侧的段落     |
 
+** 文本块操作命令
 
+| 键盘操作       | 命令名称                | 动作                                  |
+|----------------+-------------------------+---------------------------------------|
+| C-@ 或 C-SPACE | set-mark-command        | 标记文本块的开始(或结束)位置          |
+| C-x C-x        | exchange-point-and-mark | 互换插入点和文本标记的位置            |
+| C-w            | kill-region             | 删除文本块                            |
+| C-y            | yank                    | 粘贴最近删除或复制的文本              |
+| M-w            | kill-ring-save          | 复制文本块                            |
+| M-h            | mark-paragraph          | 标记段落                              |
+| C-x C-p        | mark-page               | 标记页面                              |
+| C-x h          | mark-whole-buffer       | 标记整个缓冲区                        |
+| M-y            | yank-pop                | 在用过 "C-y" 命令后粘贴更早删除的文本 |
 
+** 位置交换命令
 
+| 键盘操作 | 命令名称             | 动作                 |
+|----------+----------------------+----------------------|
+| C-t      | transpose-chars      | 交换两个字符的位置   |
+| M-t      | transpose-words      | 交换两个单词的位置   |
+| C-x C-t  | transpose-lines      | 交换两个文本行的位置 |
+| 无       | transpose-sentences  | 交换两个句子的位置   |
+| 无       | transpose-paragraphs | 交换两个段落的位置   |
 
+** 字母大小写编辑命令
 
+| 键盘操作 | 命令名称                          | 动作                           |
+|----------+-----------------------------------+--------------------------------|
+| M-c      | capitalize-word                   | 把单词的首字符改为大写         |
+| M-u      | upcase-word                       | 把单词的字符全部改为大写       |
+| M-l      | downcase-word                     | 把单词的字符全部改为小写       |
+| M - M-c  | negtive-argument; capitalize-word | 把前一个单词的首字符改为大写   |
+| M - M-u  | negtive-argument; upcase-word     | 把前一个单词的字符全部改为大写 |
+| M - M-l  | negtive-argument; downcase-word   | 把前一个单词的字符全部改为小写 |
 
+** 命令的中止和撤销
 
+| 键盘操作   | 命令名称        | 动作                           |
+|------------+-----------------+--------------------------------|
+| C-g        | keyboard-quit   | 放弃当前命令                   |
+| C-x u      | advertised-undo | 撤销上一次编辑                 |
+| C-_ 或 C-/ | undo            | 撤销上一次编辑                 |
+| 无         | revert-buffer   | 把缓冲区恢复到上次文件存盘状态 |
 
 
 
