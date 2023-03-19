@@ -155,6 +155,49 @@
 #+ATTR_HTML: :width 100%
 [[./photo/GNU Emacs Reference Card-version22.png]]
 
+*** Dired 操作命令
+
+| 键盘操作 | 解释说明                | 命令名称                     | 动作                                                       |
+|----------+-------------------------+------------------------------+------------------------------------------------------------|
+| C-x d    | Open Directory          | dired                        | 启动 Dired                                                 |
+| C        | Copy to                 | dired-do-copy                | 复制文件                                                   |
+| d        | Flag                    | dired-flag-file-deletion     | 给文件加上删除标记                                         |
+| D        | Delete                  | dired-do-delete              | 删除文件                                                   |
+| e        | Find This File          | dired-find-file              | 编辑文件                                                   |
+| f        |                         | dired-advertised-find-file   | 查找文件(并进行编辑)                                       |
+| g        | Revert Buffer           | revert-buffer                | 从磁盘上重新读入目录                                       |
+| G        | Chang Group             | dired-do-chgrp               | 改变文件的组权限                                           |
+| k        |                         | dired-do-kill-lines          | 从画面上删除光标所在的那一行                               |
+| m        | Mark                    | dired-mark                   | 给文件加上 * 待操作标记                                    |
+| n        |                         | dired-next-line              | 移动到下一行                                               |
+| o        | Find in Other Window    | dired-find-file-other-window | 在另一个窗口里查找文件，并移动到新窗口                     |
+| C-o      | Display in Other Window | dired-display-file           | 在另一个窗口里查找文件，不移动到新窗口                     |
+| q        |                         | dired-quit                   | 退出 Dired                                                 |
+| Q        |                         | dired-do-query-replace       | 在有待操作标记的文件里对字符串进行查找-替换操作            |
+| R        | Rename to               | dired-do-rename              | 重新命名文件                                               |
+| u        | Unmark                  | dired-unmark                 | 去掉待操作标记                                             |
+| v        | View This File          | dired-view-file              | 查看文件内容                                               |
+| x        |                         | dired-do-flagged-delete      | 删除有待删除标记"D"的文件                                  |
+| Z        | Compress                | dired-do-compress            | 对文件进行压缩或解压缩操作                                 |
+| 无       | Unmark All              | dired-unmark-all-files       | 把文件上待操作标记移除                                     |
+| ~        | Flag Backup Files       | dired-flag-backup-files      | 给备份文件加上待删除标记(去掉这些标记的命令是 "C-u ~")     |
+| *        | Mark Executables        | dired-mark-executables       | 给可执行文件加上 * 标记(去掉这些标记的命令是 "C-u *")      |
+| #        | Flag auto-save Files    | dired-flag-auto-save-files   | 给自动保存文件加上待删除标记(去掉这些标记的命令是 "C-u #") |
+| `        | Mark Old Backups        | dired-clean-directory        | 给带编号的备份文件加上待删除标记                           |
+| /        | Mark Directories        | dired-mark-directories       | 给目录加上 * 标记(去掉这些标记的命令是 "C-u /")            |
+| =        | Diff                    | dired-diff                   | 把当前文件与(文本标记处的)另一个文件进行比较               |
+| 无       | Compare With Backup     | dired-backup-diff            | 把当前文件与它的备份文件进行比较                           |
+| !        | Shell command           | dired-do-shell-command       | 执行shell命令(命令的操作对象是有待操作标记的文件)          |
+| 无       | Next Marked             | dired-next-marked-file       | 移动到有 * 或 D 标记的下一个文件                           |
+| 无       | Previous Marked         | dired-prev-marked-file       | 移动到有 * 或 D 标记的上一个文件                           |
+| %d       | Regexp Flag             | dired-flag-files-regexp      | 给匹配此正则表达式的文件加上待删除标记                     |
+| %m       | Regexp Flag             | dired-mark-files-regexp      | 给匹配此正则表达式的文件加上待操作标记                     |
+| +        | Create Directory        | dired-create-directory       | 创建一个目录                                               |
+| >        | Next Dirline            | dired-next-dirline           | 移动到下一个目录                                           |
+| <        | Prev Dirline            | dired-prev-dirline           | 移动到上一个目录                                           |
+| s        |                         | dired-sort-toggle-or-edit    | 对Dired编辑缓冲区里的文件清单按日期或文件名重新排序        |
+
+
 ** 对 Emacs 进行定制
 
 *** Tips
