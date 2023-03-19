@@ -197,6 +197,29 @@
 | <        | Prev Dirline            | dired-prev-dirline           | 移动到上一个目录                                           |
 | s        |                         | dired-sort-toggle-or-edit    | 对Dired编辑缓冲区里的文件清单按日期或文件名重新排序        |
 
+*** 日历移动命令
+
+| 键盘操作 | 解释说明           | 命令名称                    | 动作                |
+|----------+--------------------+-----------------------------+---------------------|
+| .        | Today              | calendar-goto-today         | 移动到今天的日期    |
+| C-f      |                    | calendar-forward-day        | 向前移动一天        |
+| C-b      |                    | calendar-backward-day       | 向后移动一天        |
+| C-n      |                    | calendar-forward-week       | 向前移动一周        |
+| C-p      |                    | calendar-backward-week      | 向后移动一周        |
+| M-}      |                    | calendar-forward-month      | 向前移动一个月      |
+| M-{      |                    | calendar-backward-month     | 向后移动一个月      |
+| C-x ]    |                    | calendar-forward-year       | 向前移动一年        |
+| C-x [    |                    | calendar-backward-year      | 向后移动一年        |
+| C-a      | Beginning of Week  | calendar-beginning-of-week  | 移到本星期开始      |
+| C-e      | Endo of Week       | calendar-end-of-week        | 移到本星期结束      |
+| M-a      | Beginning of Month | calendar-beginning-of-month | 移到本月开始        |
+| M-e      | End of Month       | calendar-end-of-month       | 移到本月结束        |
+| M-<      | Beginning of Year  | calendar-beginning-of-year  | 移到本年开始        |
+| M->      | End of Year        | calendar-end-of-year        | 移到本年结束        |
+| C-u n    |                    | universal-argument          | 重复执行随后命令n次 |
+| o        |                    | calendar-other-month        | 把制定月份放在日历  |
+| C-x <    | Forward 1 Month    | scroll-calendar-left        | 前卷一个月               |
+| C-x >    | Backward 1 Month   | scroll-calendar-right       | 后卷一个月        |
 
 ** 对 Emacs 进行定制
 
