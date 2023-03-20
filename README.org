@@ -221,6 +221,25 @@
 | C-x <    | Forward 1 Month    | scroll-calendar-left        | 前卷一个月               |
 | C-x >    | Backward 1 Month   | scroll-calendar-right       | 后卷一个月        |
 
+*** 大纲模式命令
+
+| 键盘操作 | 命令名称                         | 动作                                         |
+|----------+----------------------------------+----------------------------------------------|
+| C-c C-n  | outline-next-visible-heading     | 移动到下一个标题                             |
+| C-c C-p  | outline-previous-visible-heading | 移动到上一个标题                             |
+| C-c C-f  | outline-forward-same-level       | 移动到下一个同级标题                         |
+| C-c C-b  | outline-backward-same-level      | 移动到上一个同级标题                         |
+| C-c C-u  | outline-up-heading               | 移动到上一级的标题                           |
+| C-c C-t  | hide-body                        | 隐藏全体正文行                               |
+| C-c C-d  | hide-subtree                     | 隐藏某标题的下级标题及正文                   |
+| 无       | hide-entry                       | 隐藏某标题的正文部分(不包括下级标题和正文)   |
+| C-c C-l  | hide-leaves                      | 隐藏某标题的正文部分，同时隐藏下级标题和正文 |
+| C-c C-a  | show-all                         | 显示所有内容                                 |
+| C-c C-s  | show-subtree                     | 显示某标题的下级标题和正文                   |
+| 无       | show-entry                       | 显示某标题的文本(包括下级标题和正文)         |
+| C-c C-k  | show-branches                    | 显示当前标题的正文及所有下级标题的正文       |
+| C-c C-i  | show-children                    | 显示当前标题的下一级标题(不包括正文)                          |
+
 ** 对 Emacs 进行定制
 
 *** Tips
