@@ -198,10 +198,12 @@
 | 无       | Previous Marked         | dired-prev-marked-file       | 移动到有 * 或 D 标记的上一个文件                           |
 | %d       | Regexp Flag             | dired-flag-files-regexp      | 给匹配此正则表达式的文件加上待删除标记                     |
 | %m       | Regexp Flag             | dired-mark-files-regexp      | 给匹配此正则表达式的文件加上待操作标记                     |
-| +        | Create Directory        | dired-create-directory       | 创建一个目录                                               |
+| +        | Create Directory        | dired-create-directory       | 新建目录                                                   |
 | >        | Next Dirline            | dired-next-dirline           | 移动到下一个目录                                           |
 | <        | Prev Dirline            | dired-prev-dirline           | 移动到上一个目录                                           |
 | s        |                         | dired-sort-toggle-or-edit    | 对Dired编辑缓冲区里的文件清单按日期或文件名重新排序        |
+| U        |                         |                              | 取消所有标记                                               |
+| ^        |                         |                              | 移动到上一层目录                                                   |
 
 *** 日历移动命令
 
