@@ -50,14 +50,20 @@
 
 *** 帮助相关命令
 
-| 键盘操作         | 命令名称                     | 功能           |                                |
-|------------------+------------------------------+----------------+--------------------------------|
-| C-h              | help-command                 | help           | 进入 Emacs 的在线帮助系统      |
-| C-h C-h 或 C-h ? | help-for-help                | 帮助命令手册   |                                |
-| C-h f            | describe-function            | 描述 "命令"    | 描述 "指定命令" 的在线帮助信息 |
-| C-h k            | describe-key                 | 描述 "键"      | 描述 "指定键" 的在线帮助信息   |
-| C-h t            | help-with-tutorial           | emacs tutorial | 启动 Emacs 教程                |
-| C-h i            | info-goto-emacs-command-node | browse manual  | 启动 Info 文档阅读器           |
+| 键盘操作         | 命令名称                     | 功能           |                                          |
+|------------------+------------------------------+----------------+------------------------------------------|
+| C-h              | help-command                 | help           | 进入 Emacs 的在线帮助系统                |
+| C-h C-h 或 C-h ? | help-for-help                | 帮助命令手册   |                                          |
+| C-h f            | describe-function            | 描述 "命令"    | 描述 "指定命令" 的在线帮助信息           |
+| C-h k            | describe-key                 | 描述 "键"      | 描述 "指定键" 的在线帮助信息             |
+| C-h t            | help-with-tutorial           | emacs tutorial | 启动 Emacs 教程                          |
+| C-h i            | info-goto-emacs-command-node | browse manual  | 启动 Info 文档阅读器                     |
+| C-h b            | describe-bindings            |                | 当前编辑缓冲区有哪些按键绑定             |
+| C-h m            | describe-mode                |                | 查看当前编辑缓冲区所在编辑模式的有关资料 |
+| C-h v            | describe-variable            |                | 显示变量的含义                           |
+| C-h w            | where-is                     |                | 显示命令的按键绑定                       |
+| C-h l            | view-lossage                 |                | 列出最近输入的100个字符                  |
+| C-h c            | describe-key-briefly         |                | 显示按键组合键运行的命令                 |
 
 *** 光标移动命令
 
@@ -284,6 +290,23 @@
   - 替换时不改变大小写情况:
     `M-x set-variable RETURN case-replace RETURN nil`
 #+END_SRC
+
+*** 宏命令
+
+| 键盘操作 | 命令名称            | 动作                 |
+|----------+---------------------+----------------------|
+| C-x (    | start-kbd-macro     | 开始录制一个宏       |
+| C-x )    | end-kbd-macro       | 结束录制宏           |
+| C-x e    | call-last-kbd-macro | 执行最近一次录制的宏 |
+
+*** 窗口操作
+
+| 键盘操作 | 命令名称                | 动作                           |
+|----------+-------------------------+--------------------------------|
+| C-x 1    | delete-other-windows    | 关闭所有窗口，只保留当前窗口   |
+| C-x 0    | delte-window            | 关闭当前窗口                   |
+| C-x 2    | split-window-vertically | 把当前窗口分割为上、下两个窗口 |
+| C-x o    | other-frame             | 移动到其它窗口                 |
 
 ** 对 Emacs 进行定制
 
