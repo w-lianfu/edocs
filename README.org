@@ -308,6 +308,16 @@
 | C-x 2    | split-window-vertically | 把当前窗口分割为上、下两个窗口 |
 | C-x o    | other-frame             | 移动到其它窗口                 |
 
+*** 编辑缓冲区命令
+
+| 键盘操作 | 命令名称          | 解释说明            | 动作                             |
+|----------+-------------------+---------------------+----------------------------------|
+| C-x b    | switch-to-buffer  |                     | 移动到指定编辑缓冲区             |
+| C-x C-b  | list-buffer       | List All Buffers    | 显示所有编辑缓冲区               |
+| C-x k    | kill-buffer       | Kill Current Buffer | 删除当前编辑缓冲区               |
+| 无       | kill-some-buffers |                     | 以问答方式删除各个编辑缓冲区     |
+| C-x s    | save-some-buffers |                     | 以问答方式保存修改过的编辑缓冲区 |
+
 ** 对 Emacs 进行定制
 
 *** Tips
