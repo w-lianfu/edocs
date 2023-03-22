@@ -365,6 +365,25 @@
 | DEL  | 移除上一行书签的待操作标记                     |
 | q    | 退出                                           |
 
+*** neotree 命令
+
+| 键盘操作              | 命令名称                   | 动作                                                |
+|-----------------------+----------------------------+-----------------------------------------------------|
+|                       | neotree-toggle             | 显示/隐藏 neotree                                   |
+|                       | neotree-show               | 显示 neotree                                        |
+|                       | neotree-hide               | 隐藏 neotree                                        |
+|                       | neotree-dir                | 显示 neotree, root 为当前文件所在目录               |
+| A                     | neotree-stretch-toggle     | 最大化/最小化 neotree 窗口                          |
+| H                     | neotree-hidden-file-toggle | 切换显示隐藏文件                                    |
+| g                     | neotree-refresh            | 刷新目录                                            |
+| n 或 C-n              | neotree-next-line          | 下一行                                              |
+| p 或 C-p              | neotree-previous-line      | 上一行                                              |
+| SPACE 或 Tab 或 Enter | neotree-quick-look         | 若是文件，在其它buffer打开；若是目录，展开/收起目录 |
+| C-c C-n               | neotree-create-node        | 创建文件                                            |
+| C-c C-d               | neotree-delete-node        | 删除文件/目录                                       |
+| C-d C-r               | neotree-rename-node        | 重命名文件/目录                                     |
+| C-c C-c               | neotree-change-root        | 改变根目录                                          |
+
 ** 对 Emacs 进行定制
 
 *** Tips
